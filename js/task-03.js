@@ -12,3 +12,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+// Отримуємо посилання на елемент ul.gallery
+const gallery = document.querySelector('.gallery');
+
+// Створюємо рядок для зберігання HTML-коду галереї
+let galleryHTML = '';
+
+// Проходимося по масиву зображень та створюємо елементи <li> з <img> та додаємо класи
+images.forEach(image => {
+  galleryHTML += `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" class="gallery-image"></li>`;
+});
+
+// Вставляємо готовий HTML-код галереї в ul.gallery
+gallery.insertAdjacentHTML('beforeend', galleryHTML);
+

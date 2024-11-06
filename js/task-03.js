@@ -24,5 +24,5 @@ images.forEach((image) => {
   galleryHTML += `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" class="gallery-image"></li>`;
 });
 
-// Вставляємо готовий HTML-код галереї в ul.gallery
+// Додаємо готовий HTML-код галереї в ul.gallery
 gallery.insertAdjacentHTML("beforeend", galleryHTML);
